@@ -1,33 +1,48 @@
-let input = document.querySelector(".random-ps");
-let generateBtn = document.querySelector(".gnerate-btn");
-let copybtn = document.querySelector(".copyPs");
+const input = document.querySelector(".random-ps");
+const generateBtn = document.querySelector(".gnerate-btn");
+const copyBtn = document.querySelector(".copy-ps");
 
-let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let loweCase = "abcdefghijklmnopqrstuvwxyz";
-let numbers = "0123456789";
-let symbols = "!@#$%^&*()_-~><?/|}{][;,.";
-const allChars = upperCase + loweCase + numbers + symbols;
 
-const psLength = 12;
+const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowerCase = "abcdefgfijklmnopqrstuvwxyz";
+const numbers = "0123456789";
+const symbols = "!@#$%^&*()_=-'.;/><,.?{}[]|";
 
-let generatePs = () => {
+const allChars = upperCase + lowerCase + symbols + numbers;
+
+let length = 12;
+
+function generatePs() {
     let password = "";
     password += upperCase[Math.floor(Math.random() * upperCase.length)];
-    password += loweCase[Math.floor(Math.random() * loweCase.length)];
+    password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
     password += numbers[Math.floor(Math.random() * numbers.length)];
     password += symbols[Math.floor(Math.random() * symbols.length)];
 
-    while(psLength > password.length) {
+    for(let i = 0; i < length; i++) {
         password += allChars[Math.floor(Math.random() * allChars.length)];
     }
+
     input.value = password;
 }
 
-generateBtn.addEventListener("click", generatePs);
+generateBtn.addEventListener("click",generatePs);
 
-let copyPs = () => {
-    input.select();
-    document.execCommand("copy");
+// copyBtn.addEventListener("click", () => writeClipboardText(input.value));
+// async function writeClipboardText(text) {
+//   try {
+//     await navigator.clipboard.writeText(text);
+//   } catch (error) {
+//     console.error(error.message);
+//   }
+// }
+
+copyBtn.addEventListener("click", () => copiedPs(input.value));
+
+async function copiedPs(text) {
+    try {
+        await navigator.clipboard.writeText(input.value);
+    } catch (error) {
+        console.error(error.message);
+    }
 }
-
-copybtn.addEventListener("click", copyPs);
