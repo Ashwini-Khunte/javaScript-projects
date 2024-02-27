@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .creat-gradient {
+        @apply w-full h-[100vh] bg-gradient-to-br from-[#153677] to-[#4e085f];
+    }
+}
+@layer components {
+    .img-uncheaked {
+        @apply before:content-['']  before:absolute before:h-[28px] before:w-[28px] before:rounded-[50%] before:bg-[url(https://cdn-icons-png.flaticon.com/128/7794/7794693.png)] before:bg-cover before:bg-center before:top-[2px] before:left-[-45px] cursor-pointer;
+    }
+}
+@layer components {
+    .text-uncheaked {
+        @apply text-black relative pb-4;
+    }
+}
+
+@layer components {
+    .img-cheacked {
+        @apply before:bg-[url(https://cdn-icons-png.flaticon.com/128/709/709510.png)] before:h-[20px] before:w-[20px] before:top-[6px] before:left-[-43px]; 
+    }
+}
+@layer components {
+    .text-cheacked {
+        @apply text-[#555] relative pb-4;
+    }
+}
+@layer components {
+    .delete-icon {
+        @apply bg-[url(https://cdn-icons-png.flaticon.com/128/9581/9581117.png)] bg-cover bg-center top-[5px] right-[0px] absolute h-[28px] w-[28px] hover:bg-[url(https://cdn-icons-png.flaticon.com/128/6711/6711573.png)];
+    }
+}
