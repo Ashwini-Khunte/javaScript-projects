@@ -554,11 +554,15 @@ video {
   --tw-gradient-to: #4e085f var(--tw-gradient-to-position);
 }
 
-.img-uncheaked {
+.uncheaked {
+  position: relative;
   cursor: pointer;
+  padding-bottom: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.img-uncheaked::before {
+.uncheaked::before {
   position: absolute;
   top: 2px;
   left: -45px;
@@ -572,27 +576,20 @@ video {
   content: var(--tw-content);
 }
 
-.text-uncheaked {
+.cheacked {
   position: relative;
   padding-bottom: 1rem;
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(85 85 85 / var(--tw-text-opacity));
 }
 
-.img-cheacked::before {
+.cheacked::before {
   top: 6px;
   left: -43px;
   height: 20px;
   width: 20px;
   content: var(--tw-content);
   background-image: url(https://cdn-icons-png.flaticon.com/128/709/709510.png);
-}
-
-.text-cheacked {
-  position: relative;
-  padding-bottom: 1rem;
-  --tw-text-opacity: 1;
-  color: rgb(85 85 85 / var(--tw-text-opacity));
 }
 
 .delete-icon {
