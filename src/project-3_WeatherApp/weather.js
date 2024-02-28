@@ -1,17 +1,17 @@
-const container = document.querySelector(".main-container");
+const container = document.querySelector(".sub-container");
 const searchBtn = document.querySelector(".search-btn");
 const weatherBox = document.querySelector(".weather-box");
-const weatherDetails = document.querySelector(".weather-details");
+const weatherDetails = document.querySelector(".weather-info");
 
 searchBtn.addEventListener("click", () => {
 
     const APIKey = "99e7fee6ae55fcad7a22c8927be7a3e8";
-    const city = document.querySelector(".input");
+    const city = document.querySelector(".input").value;
 
     if(city === '') 
         return;
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIkey}`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
     .then(Response => Response.json())
     .then(json => {
         
@@ -49,5 +49,11 @@ searchBtn.addEventListener("click", () => {
             default:
                 image.src = "https://cdn-icons-png.flaticon.com/256/5825/5825713.png";
         }
+
+        temprature.innerHTML = `${parseInt(json.main.temp)}<span class="absolute text-3xl">°C</span>`
+        discription.innerHTML = `${json.weather[0].description}`;
+        humidity.innerHTML = `${json.main.humidity}%`;
+        wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
     })
+
 })
