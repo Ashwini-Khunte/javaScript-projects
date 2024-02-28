@@ -19,19 +19,19 @@
             <div class="search-location">
                 <i class='bx bx-map text-[28px] p-1'></i>
                 <input type="text" class="input placeholder-change" placeholder="enter your location">
-                <i class='bx bx-search right-[0px] absolute text-[28px] p-1'></i>
+                <i class='bx bx-search search-btn right-[0px] absolute text-[28px] p-1'></i>
             </div>
 
             <div class="weather-box text-center">
             
                 <img src="https://cdn-icons-png.flaticon.com/256/5825/5825713.png" class="w-[60%] mx-auto">
 
-                <p class="text text-7xl font-bold relative pb-2 mx-auto">16
+                <p class="temp text text-7xl font-bold relative pb-2 mx-auto">0
                     <span class="absolute text-3xl">
                         °C
                     </span>
                 </p>
-                <p class="text-2xl font-semibold">Broken Clouds</p>
+                <p class="weather-details text-2xl font-semibold">Broken Clouds</p>
             
         
             </div>
@@ -41,7 +41,7 @@
                 <div class="humidity flex items-center gap-4">
                     <i class='bx bx-water text-6xl'></i>
                     <div class="content">
-                        <p class="text-[22px]">0%</p>
+                        <span class="text-[22px]">0%</span>
                         <p class="font-semibold">Humidity</p>
                     </div>
                 </div>
@@ -49,12 +49,16 @@
                 <div class="wind-speed flex items-center gap-4">
                     <i class='bx bx-wind text-6xl'></i>
                     <div class="content">
-                        <p class="text-[22px]">0Km/h</p>
+                        <span class="text-[22px]">0Km/h</span>
                         <p class="font-semibold">Humidity</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <!-- javascript link  -->
+    <script src="weather.js"></script>
 </body>
 </html>
