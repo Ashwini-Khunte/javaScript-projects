@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- boxicon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="../output.css">
+    <!-- npx tailwindcss -i ./src/project-4_WeatherAppNew/input.css -o ./src/output.css --watch -->
+</head>
+<body>
+
+    <div class="main-container ">
+        <div class="sub-container">
+            <div class="search-box">
+                <i class='bx bx-map text-[28px] p-1'></i>
+                <input type="text" class="w-full h-[100%] placeholder-change p-3 bg-transparent" placeholder="Enter Location">
+                <i class='bx bx-search text-[28px]'></i>
+            </div>
+
+            <div class="weather-box text-center py-4">
+                <img src="https://cdn-icons-png.flaticon.com/256/5825/5825713.png" alt="" class="w-[60%] mx-auto">
+
+                <div class="temp-info">
+                    <p class="temp">16
+                        <span class="absolute text-3xl">°C</span></p>
+                    <p class="text-2xl">Broken Clouds</p>
+                </div>
+
+                <div class="weather-details flex justify-center items-center gap-7 pt-8">
+                    <div class="humidity flex items-center gap-4">
+                        <i class='bx bx-water text-6xl'></i>
+                        <div class="content">
+                            <span class="text-xl font-bold">0%</span>
+                            <p class="font-semibold">Humidity</p>
+                        </div>
+                    </div>
+                    <div class="wind-speed flex items-center gap-4">
+                        <i class='bx bx-wind text-6xl'></i>
+                        <div class="content">
+                            <span class="text-xl font-bold">0 Km/h</span>
+                            <p class="font-semibold">Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

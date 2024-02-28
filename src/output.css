@@ -579,51 +579,66 @@ video {
 }
 
 .main-container {
+  display: flex;
   height: 100vh;
   width: 100%;
+  align-items: center;
+  justify-content: center;
   background-image: url(https://res.infoq.com/news/2022/03/ml-compute-trends/en/headerimage/generatedHeaderImage-1645449580224.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.search-location {
-  position: relative;
+.sub-container {
+  height: 540px;
+  width: 400px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,.2);
+  padding: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  --tw-backdrop-blur: blur(30px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.search-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 10px;
   border-width: 2px;
   border-color: rgba(255,255,255,.2);
-}
-
-.input {
-  height: 100%;
-  width: 100%;
-  background-color: transparent;
-  padding: 0.75rem;
-  font-size: 20px;
-  font-weight: 600;
-  text-transform: capitalize;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .placeholder-change::-moz-placeholder {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
   text-transform: capitalize;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .placeholder-change::placeholder {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
   text-transform: capitalize;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.temp {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0.5rem;
+  font-size: 4.5rem;
+  line-height: 1;
+  font-weight: 700;
 }
 
 .absolute {
@@ -671,6 +686,10 @@ video {
   display: grid;
 }
 
+.h-\[100\%\] {
+  height: 100%;
+}
+
 .h-\[100vh\] {
   height: 100vh;
 }
@@ -693,10 +712,6 @@ video {
 
 .w-\[60\%\] {
   width: 60%;
-}
-
-.w-\[65\%\] {
-  width: 65%;
 }
 
 .w-full {
@@ -741,6 +756,10 @@ video {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-7 {
+  gap: 1.75rem;
 }
 
 .rounded-\[10px\] {
@@ -812,6 +831,10 @@ video {
   padding: 0.5rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .p-4 {
   padding: 1rem;
 }
@@ -824,9 +847,9 @@ video {
   padding: 15px 40px;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-2 {
@@ -843,10 +866,6 @@ video {
 
 .pt-20 {
   padding-top: 5rem;
-}
-
-.pt-4 {
-  padding-top: 1rem;
 }
 
 .pt-6 {
