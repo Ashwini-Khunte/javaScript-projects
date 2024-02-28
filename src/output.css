@@ -544,71 +544,64 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.creat-gradient {
+.main-container {
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
-  --tw-gradient-from: #153677 var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(21 54 119 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #4e085f var(--tw-gradient-to-position);
-}
-
-.uncheaked {
-  position: relative;
-  cursor: pointer;
-  padding-bottom: 1rem;
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.uncheaked::before {
-  position: absolute;
-  top: 2px;
-  left: -45px;
-  height: 28px;
-  width: 28px;
-  border-radius: 50%;
-  background-image: url(https://cdn-icons-png.flaticon.com/128/7794/7794693.png);
-  background-size: cover;
-  background-position: center;
-  --tw-content: '';
-  content: var(--tw-content);
-}
-
-.cheacked {
-  position: relative;
-  padding-bottom: 1rem;
-  --tw-text-opacity: 1;
-  color: rgb(85 85 85 / var(--tw-text-opacity));
-}
-
-.cheacked::before {
-  top: 6px;
-  left: -43px;
-  height: 20px;
-  width: 20px;
-  content: var(--tw-content);
-  background-image: url(https://cdn-icons-png.flaticon.com/128/709/709510.png);
-}
-
-.delete-icon {
-  position: absolute;
-  top: 5px;
-  right: 0px;
-  height: 28px;
-  width: 28px;
-  background-image: url(https://cdn-icons-png.flaticon.com/128/9581/9581117.png);
+  background-image: url(https://res.infoq.com/news/2022/03/ml-compute-trends/en/headerimage/generatedHeaderImage-1645449580224.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.delete-icon:hover {
-  background-image: url(https://cdn-icons-png.flaticon.com/128/6711/6711573.png);
+.search-location {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: rgba(255,255,255,.2);
+}
+
+.input {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  padding: 0.75rem;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.placeholder-change::-moz-placeholder {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.placeholder-change::placeholder {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.absolute {
+  position: absolute;
 }
 
 .relative {
   position: relative;
+}
+
+.right-\[0px\] {
+  right: 0px;
 }
 
 .m-4 {
@@ -620,6 +613,18 @@ video {
   margin-right: auto;
 }
 
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .flex {
   display: flex;
 }
@@ -628,24 +633,72 @@ video {
   display: grid;
 }
 
+.h-\[100vh\] {
+  height: 100vh;
+}
+
+.h-\[540px\] {
+  height: 540px;
+}
+
+.h-auto {
+  height: auto;
+}
+
 .w-10 {
   width: 2.5rem;
+}
+
+.w-\[400px\] {
+  width: 400px;
+}
+
+.w-\[60\%\] {
+  width: 60%;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-\[700px\] {
   max-width: 700px;
 }
 
+.max-w-\[900px\] {
+  max-width: 900px;
+}
+
 .grid-cols-\[80\%_auto\] {
   grid-template-columns: 80% auto;
+}
+
+.items-center {
+  align-items: center;
 }
 
 .justify-start {
   justify-content: flex-start;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
 .gap-6 {
   gap: 1.5rem;
+}
+
+.rounded-\[10px\] {
+  border-radius: 10px;
 }
 
 .rounded-\[30px\] {
@@ -656,9 +709,31 @@ video {
   border-radius: 5px;
 }
 
+.border-\[2px\] {
+  border-width: 2px;
+}
+
+.border-\[rgba\(255\2c 255\2c 255\2c \.2\)\] {
+  border-color: rgba(255,255,255,.2);
+}
+
+.bg-\[\#082f49\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 47 73 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#edeef0\] {
   --tw-bg-opacity: 1;
   background-color: rgb(237 238 240 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#fca5a5\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgba\(255\2c 255\2c 255\2c \.1\)\] {
+  background-color: rgba(255,255,255,.1);
 }
 
 .bg-orange-500 {
@@ -675,12 +750,28 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .p-10 {
   padding: 2.5rem;
 }
 
 .p-16 {
   padding: 4rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .p-\[15px_40px\] {
@@ -691,10 +782,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.pb-3 {
-  padding-bottom: 0.75rem;
-}
-
 .pl-10 {
   padding-left: 2.5rem;
 }
@@ -703,17 +790,56 @@ video {
   padding-left: 1rem;
 }
 
+.pt-20 {
+  padding-top: 5rem;
+}
+
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .font-sans {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.text-\[22px\] {
+  font-size: 22px;
+}
+
+.text-\[28px\] {
+  font-size: 28px;
+}
+
+.text-\[50px\] {
+  font-size: 50px;
 }
 
 .text-xl {
@@ -729,6 +855,25 @@ video {
   font-weight: 600;
 }
 
+.leading-snug {
+  line-height: 1.375;
+}
+
+.text-\[\#fca5a5\] {
+  --tw-text-opacity: 1;
+  color: rgb(252 165 165 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-green-600 {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
+}
+
 .text-sky-950 {
   --tw-text-opacity: 1;
   color: rgb(8 47 73 / var(--tw-text-opacity));
@@ -737,6 +882,14 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.underline-offset-8 {
+  text-underline-offset: 8px;
 }
 
 .placeholder-slate-400::-moz-placeholder {
@@ -752,4 +905,10 @@ video {
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.backdrop-blur-\[30px\] {
+  --tw-backdrop-blur: blur(30px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }

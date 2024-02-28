@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+   .main-container {
+    @apply w-[100%] h-[100vh] bg-[url(https://res.infoq.com/news/2022/03/ml-compute-trends/en/headerimage/generatedHeaderImage-1645449580224.jpg)] bg-cover bg-center;
+   }
+}
+
+@layer components {
+    .search-location {
+        @apply flex justify-between items-center rounded-[10px] relative border-2 border-[rgba(255,255,255,.2)];
+    }
+}
+
+@layer components {
+    .input {
+        @apply outline-none w-[100%] h-[100%] bg-transparent p-3 text-[20px] capitalize font-semibold text-white;
+    }
+}
+
+@layer components {
+    .placeholder-change {
+        @apply placeholder:text-[20px] 
+        placeholder:text-white placeholder:capitalize placeholder:font-semibold;
+    }
+}
