@@ -19,36 +19,42 @@
             <div class="search-box">
                 <i class='bx bx-map text-[28px] p-1'></i>
                 <input type="text" class="city placeholder-change" placeholder="Enter Location">
-                <i class='bx bx-search search-btn text-[28px] cursor-pointer'></i>
+                <i class='bx bx-search searchBtn text-[28px] cursor-pointer'></i>
             </div>
 
-            <div class="weather-box text-center py-4">
+            <div class="weather-box text-center py-4 hidden active">
                 <img src="https://cdn-icons-png.flaticon.com/256/5825/5825713.png" alt="" class="w-[60%] mx-auto">
 
                 <div class="temp-info">
-                    <p class="temp">16
+                    <p class="temp">0
                         <span class="absolute text-3xl">°C</span>
                     </p>
-                    <p class="discription text-2xl">Broken Clouds</p>
+                    <p class="description text-2xl">Broken Clouds</p>
                 </div>
 
                 <div class="weather-details flex justify-center items-center gap-7 pt-8">
-                    <div class="humidity flex items-center gap-4">
+                    <div class="flex items-center gap-4">
                         <i class='bx bx-water text-6xl'></i>
                         <div class="content">
-                            <span class="text-xl font-bold">0%</span>
+                            <span class="humidity text-xl font-bold">0%</span>
                             <p class="font-semibold">Humidity</p>
                         </div>
                     </div>
-                    <div class="wind-speed flex items-center gap-4">
+                    <div class="flex items-center gap-4">
                         <i class='bx bx-wind text-6xl'></i>
                         <div class="content">
-                            <span class="text-xl font-bold">0 Km/h</span>
+                            <span class="wind-speed text-xl font-bold">0 Km/sec</span>
                             <p class="font-semibold">Wind Speed</p>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="error404 pt-4 text-center hidden active">
+                <img src="https://cdn-icons-png.flaticon.com/128/675/675564.png" alt="" class="w-[60%] mx-auto">
+                <p class="text-2xl font-bold pt-2">Opps! Location not found!</p>
+            </div>
+
         </div>
     </div>
     
