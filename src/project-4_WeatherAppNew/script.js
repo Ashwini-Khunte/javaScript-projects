@@ -32,17 +32,9 @@ searchBtn.addEventListener("click", () => {
 
     fetchWeatherData(city)
     .then (data => {
-
-        if(data.cod == '404') {
-            container.style.height = '400px';
-            weatherBox.classList.remove("active");
-            error404.classList.add("active");
-            return;
-        }
-
-            container.style.height = '540px';
-            weatherBox.classList.add("active");
-            error404.classList.remove("active");
+        container.style.height = '540px';
+        weatherBox.classList.remove("hidden");
+        error404.classList.add("hiddden");
 
         switch (data.condition) {
             case 'Clear':
@@ -86,7 +78,14 @@ searchBtn.addEventListener("click", () => {
         wind.textContent = `${parseInt(data.windSpeed)}Km/sec`;
         description.textContent = data.description;
 
-    })
+    }).catch(error => {
+        
+        container.style.height = '400px';
+        weatherBox.classList.add("hidden");
+        error404.classList.remove("hidden");
+    }) 
+
+    error404.classList.add("hidden");
 })
 
 
