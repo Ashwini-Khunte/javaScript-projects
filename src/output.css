@@ -590,7 +590,7 @@ video {
 }
 
 .sub-container {
-  height: 540px;
+  height: 100px;
   width: 400px;
   border-radius: 10px;
   background-color: rgba(255,255,255,.2);
@@ -600,6 +600,9 @@ video {
   --tw-backdrop-blur: blur(30px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  transition-property: height;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .search-box {
@@ -655,10 +658,6 @@ video {
 }
 
 .active {
-  visibility: visible;
-}
-
-.unactive {
   visibility: visible;
 }
 
